@@ -3,7 +3,7 @@ package Test;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
-public class C08_JSONPathKullanimi {
+public class C08_JSONObjectVerileriCagirma {
     /*
     {
     "firstName": "John",
