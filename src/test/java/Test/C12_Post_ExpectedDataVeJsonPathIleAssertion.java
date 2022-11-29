@@ -76,5 +76,11 @@ public class C12_Post_ExpectedDataVeJsonPathIleAssertion {
         // 4 - Assertion
         JsonPath resJS = response.jsonPath();
         assertEquals(expBody.getJSONObject("booking").get("firstname"),resJS.get("booking.firstname"));
+        assertEquals(expBody.getJSONObject("booking").get("lastname"),resJS.get("booking.lastname"));
+        assertEquals(expBody.getJSONObject("booking").get("totalprice"),resJS.get("booking.totalprice"));
+        assertEquals(expBody.getJSONObject("booking").get("depositpaid"),resJS.get("booking.depositpaid"));
+        assertEquals(expBody.getJSONObject("booking").get("additionalneeds"),resJS.get("booking.additionalneeds"));
+        assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkin"),resJS.get("booking.bookingdates.checkin"));
+        assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"),resJS.get("booking.bookingdates.checkout"));
     }
 }
